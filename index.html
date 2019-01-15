@@ -2,8 +2,34 @@
 <html>
 <head>
 	<title>ChessLogBook</title>
+	<script src="siema.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	Download the ChessLogBook application here: <a href="https://github.com/mwpb/ChessLogBook/raw/master/ChessLogBook.dmg">dmg</a>.
+	<h1>ChessLogBook</h1>
+	<div style="text-align:center">
+		A MacOS application for playing chess on the Free Internet Chess Server. <a href="https://github.com/mwpb/ChessLogBook/raw/master/ChessLogBook.dmg">Download dmg</a>.
+	</div>
+	<div class="siema">
+	  <img src="./images/game_widget.png">
+	  <img src="./images/server_widget.png">
+	  <img src="./images/seek_widget.png">
+	  <img src="./images/score_widget.png">
+	</div>
+	<div style="text-align: center; margin-bottom: 50px">
+		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" onclick="si.prev()">
+			<title>previous LTR</title>
+			<path d="M4.8 10l9 9 1.4-1.5L7.8 10l7.4-7.5L13.8 1z"/>
+		</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" onclick="si.next()">
+			<title>next LTR</title>
+			<path d="M6.2 1L4.8 2.5l7.4 7.5-7.4 7.5L6.2 19l9-9z"/>
+		</svg>
+	</div>
+	<script type="text/javascript">
+		si = new Siema()
+		document.querySelector('.prev').addEventListener('click', () => si.prev());
+		document.querySelector('.next').addEventListener('click', () => si.next());
+	</script>
 </body>
 </html>
